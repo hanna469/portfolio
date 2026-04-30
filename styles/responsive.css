@@ -1,0 +1,95 @@
+/* responsive.css */
+@media screen and (min-width:600px) {
+    /* 1행 글자크기, 여백 등 */
+    #wrap .intro p span {font-size: 1.75rem;}
+    /* 3행 프로젝트 이미지 w100% */
+    #wrap .project_wrap .project .title_thum .mockup img {
+        height:auto; /* 100% 덮어쓰기값으로 auto변경 */
+        /* transform: translateY(-60px) scale(1.2); */
+        width:100%}
+    /* 4행 그래픽 이미지 확대 */
+    #wrap .project_wrap .graphic_wrap .graphic_container a {width:184px; height: 300px;}
+} /* 사용자가 보는 기기 너비가 600보다 크면 */
+@media screen and (min-width:840px) {
+    /* 2행 info -> 1행 2열 레이아웃 구조 변경 */
+    #wrap .info .details {
+    display: grid;
+    grid-template-columns: 468px 580px;
+    gap:53px;
+    }
+    #wrap > .info {
+    height: auto; flex-flow: row nowrap;
+    gap:155px; padding: 120px 0 200px;
+    }
+    #wrap .info .details dl {margin-bottom: 20px;}
+    #wrap .info .details dl dt {font-size: 1.25rem; font-weight: 500;}
+    #wrap .info .details dl dd {line-height: 2.0; position: relative;}
+    #wrap .info .details dl dd::before {
+        content: ''; display: block;
+        width: 4px; height: 4px;
+        background-color: #000;
+        border-radius: 50%;
+        position: absolute; left:-10px; top:14px;
+    }
+    /* 3행 web -> 1행 2열 레이아웃 구조 변경 */
+    #wrap .web_project {}
+#wrap .web_project .web_container {}
+#wrap .web_project .web_container .project {
+    display: flex; gap:46px;
+    position: relative;
+}
+#wrap .web_project .web_container .project .title_thum {}
+#wrap .web_project .web_container .project .title_thum .mockup {height: 100vh; width: 70vw;}
+#wrap .web_project .web_container .project .title_thum .mockup img {width: 100%; height: 100%; object-fit: cover;}
+#wrap .web_project .web_container .project .details {margin: 15vh 1vw 0 0;}
+#wrap .web_project .web_container .project .details h1 {
+    font-size: 2rem; font-weight: 500;
+    margin-bottom: 19px;
+}
+#wrap .web_project .web_container .project .details .info {}
+#wrap .web_project .web_container .project .details .info .info_list {
+    margin-bottom: 19px; display: flex; flex-flow: row nowrap; gap:10px;}
+#wrap .web_project .web_container .project .details .info .info_list dt {width: 100px; flex-shrink: 0;}
+#wrap .web_project .web_container .project .details .info .info_list dd {}
+#wrap .web_project .web_container .project .details .plan {line-height: 2;}
+#wrap .web_project .web_container .project .details .plan .overview {color:#084FFF; display: block; overflow-wrap:break-word;}
+#wrap .web_project .web_container .project .details .link {
+    display: flex; flex-flow: row nowrap;
+    justify-content: flex-end;
+    gap: 10px;
+    position: absolute; bottom:10vh; right: 1vw;
+}
+#wrap .web_project .web_container .project .details .link a {
+    font-size: 0.88rem; text-align: center;
+    height:38px; border-radius: 8px; line-height: 38px;
+    border: 1px solid #333;
+}
+#wrap .web_project .web_container .project .details .link .proposal {width: 116px;}
+#wrap .web_project .web_container .project .details .link .f_prototype {
+    display: grid;
+    grid-template-columns:74px 74px;
+    gap:10px;
+}
+#wrap .web_project .web_container .project .details .link .f_prototype .prototype {}
+#wrap .web_project .web_container .project .details .link .f_prototype .pc {grid-column: span 2; width: 158px;}
+#wrap .web_project .web_container .project .details .link .f_prototype .tablet {width: 74px;}
+#wrap .web_project .web_container .project .details .link .f_prototype .mobile {width: 74px;}
+#wrap .web_project .web_container .project .details .link .html_proto {width: 158px;}
+#wrap .web_project .web_container .project .details .link .original {
+    border: 0;
+    position: absolute; bottom:-80px; right:10px;
+}
+#wrap .web_project .web_container .project .details .link .original::after {
+    content:''; display: block; background-image: url(../images/next-button.png); width: 16px; height: 16px; background-size: cover;
+    position: absolute; right: -18px; bottom: 10px;
+}
+#wrap .web_project .web_container .project1 {}
+#wrap .web_project .web_container .project2 {}
+    #wrap .project_wrap .project .title_thum h2 {font-size: 1.13rem;}
+    /* 4행 그래픽 이미지 확대 */
+    #wrap .project_wrap .graphic_wrap .graphic_container a {width:246px; height: 400px; transition: width 0.5s, height 0.5s;}
+    #wrap .project_wrap .graphic_wrap .graphic_container a:hover {
+        /* transform: scale(1.2); */
+        width:300px; height:400px;
+    }
+} /* 사용자가 보는 기기 너비가 840보다 크면 */

@@ -1,0 +1,272 @@
+@font-face {
+    font-family: 'Danjo-bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Danjo-bold-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+/* 모바일 기준 w440 */
+html {scroll-behavior: smooth;} /* 스크롤 애니메이션 효과 */
+/* Firefox */
+html {scrollbar-width: 5px;;scrollbar-color: #88bcff #222;}
+/* Opera */
+html::-o-scrollbar {width: 5px;}
+html::-o-scrollbar-thumb {background-color: #88bcff;border-radius: 5px;}
+/* Chrome, Safari, Edge 등 웹킷 기반 브라우저 */
+::-webkit-scrollbar {width: 5px;}
+::-webkit-scrollbar-track {box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);}
+::-webkit-scrollbar-thumb {background-color: #88bcff;border-radius: 5px;}
+/* body {background-color: #222;} */
+#wrap {
+    /* width:440px; */ /* 디자인 기준 크기 (iphone 17proMax) */
+    min-width: 320px; /* 최소 제한 너비(고정) */
+    /* max-width: 440px; */ /* 최대 제한 너비(디자인에 따라 다름) */
+    box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+    background-color: #fff;
+    margin:0 auto;
+    /* overflow-x:hidden; */ /* x축 나간요소와 가로스크롤 숨기기 */
+    /* height: 100vh; */
+}
+#wrap .info,
+#wrap .project_wrap .project {
+    max-width: 1400px;
+    margin:0 auto;
+}
+/* ============================================= 0.header */
+#wrap header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin: 50px 0; height: 50px; width: 95%;
+    padding: 0 30px;
+    position: fixed; top:0; left:50%; transform: translateX(-50%); z-index: 999;
+    border-top: 2px solid #000; border-bottom: 1px solid #000;
+    background-color: transparent;
+}
+#wrap header h1 {font-size: 0.88rem; line-height: 1.5;}
+#wrap header #gnb {display: flex; justify-content: space-between; gap:80px;}
+#wrap header #gnb li {position: relative;}
+#wrap header #gnb li::after {
+    content: ''; display: block; width: 1px; height: 14px; background-color: #bbb;
+    position: absolute; right:-40px; top:6px;
+}
+#wrap header #gnb li:last-child::after {display: none;}
+
+/* ============================================= 1. intro */
+#wrap header,
+#wrap .intro *,
+#wrap .info .profile h1,
+#wrap .info .profile .me *,
+#wrap .index_list .list_top .num_list p,
+#wrap .index_list .list_btm p,
+#wrap .graphic_project h1 {font-family: 'Montserrat','pretendard',sans-serif;}
+
+#wrap .intro {
+    height: 100vh;
+    background-image: url(../images/bg1.jpg);
+    background-size: cover;
+    display:flex; flex-flow: row nowrap;
+    justify-content: center; align-items: center;
+    position: relative;
+}
+#wrap .intro h1 {
+    font-size: 3.75rem; font-weight: 500;
+    position: absolute; left:10%; top:35%;
+}
+#wrap .intro h1 span {font-size: 5rem; font-weight: 500;}
+#wrap .intro p {position: absolute; right: 10%; bottom: 15%;}
+#wrap .intro p span {display: block; text-align: right; font-size: 1.25rem;}
+/* #wrap .intro p span:nth-child(2) {margin-bottom: 3px;} */
+#wrap .intro p .name {text-align: right;}
+#wrap .intro p .name img {}
+/* ============================================ 1-2. list */
+#wrap .index_list {
+    height: 100vh;
+    background-image: url(../images/bg2.jpg);
+    background-size: cover;
+}
+#wrap .index_list * {color:#fff;}
+#wrap .index_list .list_top {display: flex; gap:79px; justify-content: center; padding-top: 35vh;}
+#wrap .index_list .list_top .num_list {text-align: center;}
+#wrap .index_list .list_top .num_list p {font-size: 1.88rem;}
+#wrap .index_list .list_top .num_list .num {font-size: 9.38rem; font-family: 'Danjo-bold',sans-serif; position: relative; line-height: 1.0;overflow: hidden;}
+#wrap .index_list .list_top .num_list .num::after {
+    content: ''; display: block; background-image: url(../images/bg2.jpg); background-size: cover;
+    box-shadow: 0 -10px 13px -5px rgba(0, 0, 0, 0.7);
+    width: 100%; height: 35%; position: absolute; bottom:10px; left:0;
+}
+#wrap .index_list .list_btm {text-align: center;}
+#wrap .index_list .list_btm p {font-size: 1.38rem; margin: 10vh 0 15px;}
+#wrap .index_list .list_btm .redesign_img {display: flex; gap:20px; justify-content: center;}
+#wrap .index_list .list_btm .redesign_img span {width: 582px; height: 238px; border-radius: 10px; overflow: hidden; position: relative;}
+#wrap .index_list .list_btm .redesign_img span::after {
+    content: ''; display: block; width: 100%; height: 100%;
+    position: absolute; z-index: 100; top:0;
+    background-color: rgba(255,255,255,0.2);}
+#wrap .index_list .list_btm .redesign_img span img {width: 100%;}
+
+/* ============================================= 2. info */
+#wrap > .info {
+    height: 100vh; display: flex;
+    flex-flow: column nowrap;
+    justify-content:center;
+    align-items: center;
+}
+#wrap .info .profile h1 {font-size: 2rem; font-weight: 500; line-height: 1.5; margin-bottom: 46px;}
+#wrap .info .profile {}
+#wrap .info .profile .photo {
+    width:313px; height:382px;
+    margin: 0 auto; position: relative; margin-bottom: 80px;
+}
+#wrap .info .profile .photo::after {
+    content: ''; display: block; background-color: rgba(0,0,0,0.5);
+    width: 321px; height: 389px; border-radius: 29px;
+    position: absolute; right: -8px; bottom: -7px; z-index: 50;
+}
+#wrap .info .profile .photo img {width:100%; height: 100%; object-fit: cover; object-position: center top; position: relative; z-index: 70; border-radius: 20px;}
+#wrap .info .profile .me {
+    padding-left: 15px;
+    display: flex; flex-flow: row wrap;
+    justify-content: flex-start;
+    width:332px;
+    margin: 0 auto 40px;
+}
+#wrap .info .profile .me .info_name {font-size: 3rem;}
+#wrap .info .profile .me .info_name > * {font-weight: 600;}
+#wrap .info .profile .me .info_name span {font-size: 1.13rem; margin-left: 6px;}
+#wrap .info .profile .me li {
+    margin-bottom: 8px;
+    text-align: left;
+    width:100%;
+}
+#wrap .info .profile .me li span {margin-left: 36px;}
+#wrap .info .profile .me li a {}
+#wrap .info .profile h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-align: center;
+}
+#wrap .info .details .skill_list {
+    display: flex; flex-flow: row wrap;
+    justify-content: center;
+    gap : 12px;
+    width: 300px;
+}
+#wrap .info .details .skill_list dt {width: 100%;}
+#wrap .info .details .skill_list dd::before {display: none;}
+#wrap .info .details .skill_list dd {
+    width:calc(100% / 6); margin: 0 0 12px;
+}
+#wrap .info .details .skill_list dd img {width:100%;}
+#wrap .info .details {display: none;}
+#wrap .info .details dl {}
+#wrap .info .details dl dt {line-height: 1.5;}
+#wrap .info .details dl dd {line-height: 2;}
+/* ====================================================== 3. project */
+#wrap .project_wrap {}
+/* ==================================================== 공통 프로젝트(web) 선택자 */
+#wrap .web_project {}
+#wrap .web_project .web_container {}
+#wrap .web_project .web_container .project {
+    display: flex; gap:46px;
+    position: relative;
+}
+#wrap .web_project .web_container .project .title_thum {}
+#wrap .web_project .web_container .project .title_thum .mockup {height: 100vh; width: 70vw;}
+#wrap .web_project .web_container .project .title_thum .mockup img {width: 100%; height: 100%; object-fit: cover;}
+#wrap .web_project .web_container .project .details {margin: 15vh 1vw 0 0;}
+#wrap .web_project .web_container .project .details h1 {
+    font-size: 2rem; font-weight: 500;
+    margin-bottom: 19px;
+}
+#wrap .web_project .web_container .project .details .info {}
+#wrap .web_project .web_container .project .details .info .info_list {
+    margin-bottom: 19px; display: flex; flex-flow: row nowrap; gap:10px;}
+#wrap .web_project .web_container .project .details .info .info_list dt {width: 100px; flex-shrink: 0;}
+#wrap .web_project .web_container .project .details .info .info_list dd {}
+#wrap .web_project .web_container .project .details .plan {line-height: 2;}
+#wrap .web_project .web_container .project .details .plan .overview {color:#084FFF; display: block; overflow-wrap:break-word;}
+#wrap .web_project .web_container .project .details .link {
+    display: flex; flex-flow: row nowrap;
+    justify-content: flex-end;
+    gap: 10px;
+    position: absolute; bottom:10vh; right: 1vw;
+}
+#wrap .web_project .web_container .project .details .link a {
+    font-size: 0.88rem; text-align: center;
+    height:38px; border-radius: 8px; line-height: 38px;
+    border: 1px solid #333;
+}
+#wrap .web_project .web_container .project .details .link .proposal {width: 116px;}
+#wrap .web_project .web_container .project .details .link .f_prototype {
+    display: grid;
+    grid-template-columns:74px 74px;
+    gap:10px;
+}
+#wrap .web_project .web_container .project .details .link .f_prototype .prototype {}
+#wrap .web_project .web_container .project .details .link .f_prototype .pc {grid-column: span 2; width: 158px;}
+#wrap .web_project .web_container .project .details .link .f_prototype .tablet {width: 74px;}
+#wrap .web_project .web_container .project .details .link .f_prototype .mobile {width: 74px;}
+#wrap .web_project .web_container .project .details .link .html_proto {width: 158px;}
+#wrap .web_project .web_container .project .details .link .original {
+    border: 0;
+    position: absolute; bottom:-80px; right:10px;
+}
+#wrap .web_project .web_container .project .details .link .original::after {
+    content:''; display: block; background-image: url(../images/next-button.png); width: 16px; height: 16px; background-size: cover;
+    position: absolute; right: -18px; bottom: 10px;
+}
+#wrap .web_project .web_container .project1 {}
+#wrap .web_project .web_container .project2 {}
+/* ================================================================== 3행. 그래픽디자인 프로젝트*/
+#wrap .graphic_project h1 {font-size: 2rem; text-align: center;}
+#wrap .graphic_project h1 + p {
+    text-align: right; font-size: 0.88rem;
+    margin: 3px 15px 30px auto;
+    position: relative;
+    width: max-content;
+}
+#wrap .graphic_project h1 + p::before {
+    content: ''; display: block;
+    width: 4px; height: 4px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute; left:-10px; top:8px;
+}
+#wrap .graphic_project .graphic_wrap,
+#wrap .graphic_project .graphic_bnr_wrap {
+    /* padding: 0 15px; */
+    overflow: hidden;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+}
+#wrap .graphic_project .graphic_wrap .graphic_container {
+    display: flex; gap:20px; flex-flow: row nowrap;
+    width: max-content; 
+}
+#wrap .graphic_project .graphic_wrap .graphic_container a {
+    width:123px; height:300px; background-color: #eee; overflow: hidden;
+}
+#wrap .graphic_project .graphic_wrap .graphic_container a img {width:100%;}
+
+#wrap .graphic_project .graphic_bnr_wrap .graphic_bnr_container {
+    margin: 15px 0; display: flex; flex-flow: row nowrap; gap:20px;
+}
+#wrap .graphic_project .graphic_bnr_wrap .graphic_bnr_container a {
+    height: 238px;
+}
+#wrap .graphic_project .graphic_bnr_wrap .graphic_bnr_container a img {width:100%; object-fit: cover;}
+
+/*  ------------------------------------------(위)그래픽 이미지 클릭 시 실행되는 팝업 */
+#wrap .graphic_project .graphic_popup_bg {
+    position: fixed; left:0; top:0; width:100%; height:100%;
+    background: rgba(0,0,0,0.5); z-index: 999;
+    /* display: flex; justify-content: center; align-items: center; */
+    display: none; /* 초기 숨기기 */
+}
+#wrap .graphic_project .graphic_popup_bg .graphic_popup {
+    width:70%; height:60vh;
+    /* overflow-x: hidden; */
+    overflow-y: auto;
+    background: #fff;
+    position: absolute; left:50%; top: 50%; transform: translate(-50%,-50%);
+}
+#wrap .graphic_project .graphic_popup_bg .graphic_popup img {width:100%; object-fit: cover;}
