@@ -14,16 +14,19 @@
     /* 2행 info -> 1행 2열 레이아웃 구조 변경 */
     #wrap .info .details {
     display: grid;
-    grid-template-columns: 468px 580px;
-    gap:53px;
+    grid-template-columns: 0.8fr 1fr;
+    gap:5%;
     }
-    #wrap > .info {
+    #wrap .info {
     height: auto; flex-flow: row nowrap;
-    gap:155px; padding: 120px 0 200px;
+    gap:5%;
+    padding: 150px 0 0 0;
+    width: 95%;
     }
+    #wrap .info .profile h1 {display: block;}
     #wrap .info .details dl {margin-bottom: 20px;}
     #wrap .info .details dl dt {font-size: 1.25rem; font-weight: 500;}
-    #wrap .info .details dl dd {line-height: 2.0; position: relative;}
+    #wrap .info .details dl dd {line-height: 2.0; position: relative; word-break: keep-all;}
     #wrap .info .details dl dd::before {
         content: ''; display: block;
         width: 4px; height: 4px;
