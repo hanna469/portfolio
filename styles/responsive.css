@@ -1,7 +1,7 @@
 /* responsive.css */
 @media screen and (min-width:600px) {
     /* 1행 글자크기, 여백 등 */
-    #wrap .intro p span {font-size: 1.75rem;}
+    #wrap .profile_info p span {font-size: 1.75rem;}
     /* 3행 프로젝트 이미지 w100% */
     #wrap .project_wrap .project .title_thum .mockup img {
         height:auto; /* 100% 덮어쓰기값으로 auto변경 */
@@ -12,22 +12,21 @@
 } /* 사용자가 보는 기기 너비가 600보다 크면 */
 @media screen and (min-width:840px) {
     /* 2행 info -> 1행 2열 레이아웃 구조 변경 */
-    #wrap .info .details {
+    #wrap .profile_info .details {
     display: grid;
-    grid-template-columns: 0.8fr 1fr;
-    gap:5%;
+    grid-template-columns: 1fr 1fr;
+    gap:7%;
     }
-    #wrap .info {
+    #wrap .profile_info {
     height: auto; flex-flow: row nowrap;
     gap:5%;
     padding: 150px 0 0 0;
-    width: 95%;
     }
-    #wrap .info .profile h1 {display: block;}
-    #wrap .info .details dl {margin-bottom: 20px;}
-    #wrap .info .details dl dt {font-size: 1.25rem; font-weight: 500;}
-    #wrap .info .details dl dd {line-height: 2.0; position: relative; word-break: keep-all;}
-    #wrap .info .details dl dd::before {
+    #wrap .profile_info .profile h1 {display: block;}
+    #wrap .profile_info .details dl {margin-bottom: 20px;}
+    #wrap .profile_info .details dl dt {font-size: 1.25rem; font-weight: 500;}
+    #wrap .profile_info .details dl dd {line-height: 2.0; position: relative; word-break: keep-all;}
+    #wrap .profile_info .details dl dd::before {
         content: ''; display: block;
         width: 4px; height: 4px;
         background-color: #000;

@@ -70,6 +70,7 @@ const graphicBnrSwiper = new Swiper(graphic_bnr,{
 const webProject = document.querySelector('.web_project');
 const webProjectSwiper = new Swiper(webProject,{
     nested: true,
+    mousewheel: true,
 })
 
 const all = document.querySelector('.all_container');

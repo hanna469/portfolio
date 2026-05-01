@@ -103,64 +103,66 @@ html::-o-scrollbar-thumb {background-color: #88bcff;border-radius: 5px;}
 #wrap .index_list .list_btm .redesign_img span img {width: 100%;}
 
 /* ============================================= 2. info */
-#wrap .info {
+#wrap .profile_info {
     height: 100vh; display: flex;
     flex-flow: column nowrap;
-    justify-content:center;
+    justify-content:space-between;
     align-items: center;
     padding: 100px 0 0 0;
+    width: 95%;
+    margin: 0 auto;
 }
-#wrap .info .profile h1 {font-size: 2rem; font-weight: 500; line-height: 1.5; margin-bottom: 46px; display: none;}
-#wrap .info .profile {}
-#wrap .info .profile .photo {
+#wrap .profile_info .profile h1 {font-size: 2rem; font-weight: 500; line-height: 1.5; margin-bottom: 46px; display: none;}
+#wrap .profile_info .profile {}
+#wrap .profile_info .profile .photo {
     width:313px; height:382px;
     margin: 0 auto; position: relative; margin-bottom: 80px;
 }
-#wrap .info .profile .photo::after {
+#wrap .profile_info .profile .photo::after {
     content: ''; display: block; background-color: rgba(0,0,0,0.5);
     width: 321px; height: 389px; border-radius: 29px;
     position: absolute; right: -8px; bottom: -7px; z-index: 50;
 }
-#wrap .info .profile .photo img {width:100%; height: 100%; object-fit: cover; object-position: center top; position: relative; z-index: 70; border-radius: 20px;}
-#wrap .info .profile .me {
+#wrap .profile_info .profile .photo img {width:100%; height: 100%; object-fit: cover; object-position: center top; position: relative; z-index: 70; border-radius: 20px;}
+#wrap .profile_info .profile .me {
     padding-left: 15px;
     display: flex; flex-flow: row wrap;
     justify-content: flex-start;
     width:332px;
     margin: 0 auto 40px;
 }
-#wrap .info .profile .me .info_name {font-size: 3rem;}
-#wrap .info .profile .me .info_name > * {font-weight: 600;}
-#wrap .info .profile .me .info_name span {font-size: 1.13rem; margin-left: 6px;}
-#wrap .info .profile .me li {
+#wrap .profile_info .profile .me .info_name {font-size: 3rem;}
+#wrap .profile_info .profile .me .info_name > * {font-weight: 600;}
+#wrap .profile_info .profile .me .info_name span {font-size: 1.13rem; margin-left: 6px;}
+#wrap .profile_info .profile .me li {
     margin-bottom: 8px;
     text-align: left;
     width:100%;
 }
-#wrap .info .profile .me li span {margin-left: 36px;}
-#wrap .info .profile .me li a {}
-#wrap .info .profile h2 {
+#wrap .profile_info .profile .me li span {margin-left: 36px;}
+#wrap .profile_info .profile .me li a {}
+#wrap .profile_info .profile h2 {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 8px;
     text-align: center;
 }
-#wrap .info .details .skill_list {
+#wrap .profile_info .details .skill_list {
     display: flex; flex-flow: row wrap;
     justify-content: center;
     gap : 12px;
     width: 300px;
 }
-#wrap .info .details .skill_list dt {width: 100%;}
-#wrap .info .details .skill_list dd::before {display: none;}
-#wrap .info .details .skill_list dd {
+#wrap .profile_info .details .skill_list dt {width: 100%;}
+#wrap .profile_info .details .skill_list dd::before {display: none;}
+#wrap .profile_info .details .skill_list dd {
     width:calc(100% / 6); margin: 0 0 12px;
 }
-#wrap .info .details .skill_list dd img {width:100%;}
-#wrap .info .details {display: none;}
-#wrap .info .details dl {}
-#wrap .info .details dl dt {line-height: 1.5;}
-#wrap .info .details dl dd {line-height: 2;}
+#wrap .profile_info .details .skill_list dd img {width:100%;}
+#wrap .profile_info .details {display: none;}
+#wrap .profile_info .details dl {}
+#wrap .profile_info .details dl dt {line-height: 1.5;}
+#wrap .profile_info .details dl dd {line-height: 2;}
 /* ====================================================== 3. project */
 #wrap .project_wrap {}
 /* ==================================================== 공통 프로젝트(web) 선택자 */
@@ -218,6 +220,7 @@ html::-o-scrollbar-thumb {background-color: #88bcff;border-radius: 5px;}
 #wrap .web_project .web_container .project1 {}
 #wrap .web_project .web_container .project2 {}
 /* ================================================================== 3행. 그래픽디자인 프로젝트*/
+#wrap .graphic_project {padding: 150px 0 0 0;}
 #wrap .graphic_project h1 {font-size: 2rem; text-align: center;}
 #wrap .graphic_project h1 + p {
     text-align: right; font-size: 0.88rem;
