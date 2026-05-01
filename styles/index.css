@@ -24,36 +24,45 @@ html::-o-scrollbar-thumb {background-color: #88bcff;border-radius: 5px;}
     /* overflow-x:hidden; */ /* x축 나간요소와 가로스크롤 숨기기 */
     height: 100vh;
 }
-#wrap .info,
+/* #wrap .info,
 #wrap .project_wrap .project {
     max-width: 1400px;
     margin:0 auto;
-}
+} */
 #wrap .all_container {height: 100vh;}
 /* ============================================= 0.header */
 #wrap header {
-    display: flex; justify-content: space-between; align-items: center;
-    margin: 50px 0; height: 50px; width: 95%;
-    padding: 0 30px;
-    position: fixed; top:0; left:50%; transform: translateX(-50%); z-index: 999;
+    display: flex; justify-content: center; align-items: center;
+    margin: 50px 0; height: 50px; width: 100%;
+    padding: 0 15px;
+    position: fixed; top:0; left:50%; transform: translateX(-50%); z-index: 800;
+}
+#wrap header.one {
     border-top: 2px solid #000; border-bottom: 1px solid #000;
-    /* background-color: transparent; */
+}
+#wrap header.two {
+    border-top: 2px solid #fff; border-bottom: 1px solid #fff;
+}
+#wrap header.two h1,
+#wrap header.two #gnb li {color:#fff;}
+#wrap header.three {
+    border-top: 2px solid #000; border-bottom: 1px solid #000;
     background: linear-gradient(rgba(255,255,255,0.8),transparent);
 }
-#wrap header h1 {font-size: 0.88rem; line-height: 1.5;}
-#wrap header #gnb {display: flex; justify-content: space-between; gap:80px;}
+#wrap header h1 {display: none;}
+#wrap header #gnb {display: flex; justify-content: space-between; gap:40px;}
 #wrap header #gnb li {position: relative;}
 #wrap header #gnb li::after {
     content: ''; display: block; width: 1px; height: 14px; background-color: #bbb;
-    position: absolute; right:-40px; top:6px;
+    position: absolute; right:-20px; top:6px;
 }
 #wrap header #gnb li:last-child::after {display: none;}
 
 /* ============================================= 1. intro */
 #wrap header,
 #wrap .intro *,
-#wrap .info .profile h1,
-#wrap .info .profile .me *,
+#wrap .profile_info h1,
+#wrap .profile_info .profile .me *,
 #wrap .index_list .list_top .num_list p,
 #wrap .index_list .list_btm p,
 #wrap .graphic_project h1 {font-family: 'Montserrat','pretendard',sans-serif;}
@@ -67,15 +76,14 @@ html::-o-scrollbar-thumb {background-color: #88bcff;border-radius: 5px;}
     position: relative;
 }
 #wrap .intro h1 {
-    font-size: 3.75rem; font-weight: 500;
-    position: absolute; left:10%; top:35%;
+    font-size: 2rem; font-weight: 500;
+    position: absolute; left:5%; top:35%;
 }
-#wrap .intro h1 span {font-size: 5rem; font-weight: 500;}
+#wrap .intro h1 span {font-size: 2.5rem; font-weight: 500;}
 #wrap .intro p {position: absolute; right: 10%; bottom: 15%;}
-#wrap .intro p span {display: block; text-align: right; font-size: 1.25rem;}
-/* #wrap .intro p span:nth-child(2) {margin-bottom: 3px;} */
+#wrap .intro p span {display: block; text-align: right; font-size: 0.88rem;}
 #wrap .intro p .name {text-align: right;}
-#wrap .intro p .name img {}
+#wrap .intro p .name img {width: 100%;}
 /* ============================================ 1-2. list */
 #wrap .index_list {
     height: 100vh;
@@ -83,70 +91,59 @@ html::-o-scrollbar-thumb {background-color: #88bcff;border-radius: 5px;}
     background-size: cover;
 }
 #wrap .index_list * {color:#fff;}
-#wrap .index_list .list_top {display: flex; gap:79px; justify-content: center; padding-top: 32vh;}
+#wrap .index_list .list_top {display: flex; gap:30px; justify-content: center; padding-top: 32vh;}
 #wrap .index_list .list_top .num_list {text-align: center;}
-#wrap .index_list .list_top .num_list p {font-size: 1.88rem;}
-#wrap .index_list .list_top .num_list .num {font-size: 9.38rem; font-family: 'Danjo-bold',sans-serif; position: relative; line-height: 1.0;overflow: hidden;}
+#wrap .index_list .list_top .num_list p {font-size: 0.88rem;}
+#wrap .index_list .list_top .num_list p span {font-size: 0.88rem; display: block;}
+#wrap .index_list .list_top .num_list .num {font-size: 3rem; font-family: 'Danjo-bold',sans-serif; position: relative; line-height: 1.0;overflow: hidden;}
 #wrap .index_list .list_top .num_list .num::after {
     content: ''; display: block; background-image: url(../images/bg2.jpg); background-size: cover;
     box-shadow: 0 -10px 13px -5px rgba(0, 0, 0, 0.7);
-    width: 100%; height: 35%; position: absolute; bottom:10px; left:0;
+    width: 100%; height: 35%; position: absolute; bottom:3px; left:0;
 }
 #wrap .index_list .list_btm {text-align: center;}
-#wrap .index_list .list_btm p {font-size: 1.38rem; margin: 9vh 0 15px;}
-#wrap .index_list .list_btm .redesign_img {display: flex; gap:20px; justify-content: center;}
-#wrap .index_list .list_btm .redesign_img span {width: 582px; height: 238px; border-radius: 10px; overflow: hidden; position: relative;}
+#wrap .index_list .list_btm p {font-size: 0.88rem; margin: 9vh 0 15px;}
+#wrap .index_list .list_btm .redesign_img {display: flex; gap:10px; justify-content: center; flex-flow:column nowrap; align-items: center;}
+#wrap .index_list .list_btm .redesign_img span {width: 80vw; height: 150px; border-radius: 10px; overflow: hidden; position: relative;}
 #wrap .index_list .list_btm .redesign_img span::after {
     content: ''; display: block; width: 100%; height: 100%;
     position: absolute; z-index: 100; top:0;
     background-color: rgba(255,255,255,0.2);}
 #wrap .index_list .list_btm .redesign_img span img {width: 100%;}
 
-/* ============================================= 2. info */
+/* ============================================= 3. profile_info */
 #wrap .profile_info {
-    height: 100vh; display: flex;
-    flex-flow: column nowrap;
-    justify-content:space-between;
-    align-items: center;
-    padding: 100px 0 0 0;
-    width: 95%;
-    margin: 0 auto;
+    display: flex; justify-content:center; align-items: center;
+    padding: 100px 0 0 0; width: 95%;
+    margin: 0 auto; position: relative;
 }
-#wrap .profile_info .profile h1 {font-size: 2rem; font-weight: 500; line-height: 1.5; margin-bottom: 46px; display: none;}
+#wrap .profile_info h1 {font-size: 2rem; font-weight: 450; line-height: 1.5; margin-bottom: 40px; display: none;}
 #wrap .profile_info .profile {}
 #wrap .profile_info .profile .photo {
-    width:313px; height:382px;
-    margin: 0 auto; position: relative; margin-bottom: 80px;
+    width:271px; height:331px;
+    position: relative;
+    margin:0 auto 50px;
 }
 #wrap .profile_info .profile .photo::after {
     content: ''; display: block; background-color: rgba(0,0,0,0.5);
-    width: 321px; height: 389px; border-radius: 29px;
+    width: 278px; height: 337px; border-radius: 29px;
     position: absolute; right: -8px; bottom: -7px; z-index: 50;
 }
 #wrap .profile_info .profile .photo img {width:100%; height: 100%; object-fit: cover; object-position: center top; position: relative; z-index: 70; border-radius: 20px;}
 #wrap .profile_info .profile .me {
-    padding-left: 15px;
     display: flex; flex-flow: row wrap;
     justify-content: flex-start;
-    width:332px;
+    width:271px;
     margin: 0 auto 40px;
 }
-#wrap .profile_info .profile .me .info_name {font-size: 3rem;}
-#wrap .profile_info .profile .me .info_name > * {font-weight: 600;}
-#wrap .profile_info .profile .me .info_name span {font-size: 1.13rem; margin-left: 6px;}
+#wrap .profile_info .profile .me .info_name {font-size: 2rem; font-weight: 500;}
+#wrap .profile_info .profile .me .info_name span {font-size: 1rem; margin-left: 6px; font-weight: 450;}
 #wrap .profile_info .profile .me li {
     margin-bottom: 8px;
     text-align: left;
-    width:100%;
 }
 #wrap .profile_info .profile .me li span {margin-left: 36px;}
 #wrap .profile_info .profile .me li a {}
-#wrap .profile_info .profile h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-    text-align: center;
-}
 #wrap .profile_info .details .skill_list {
     display: flex; flex-flow: row wrap;
     justify-content: center;
@@ -155,35 +152,33 @@ html::-o-scrollbar-thumb {background-color: #88bcff;border-radius: 5px;}
 }
 #wrap .profile_info .details .skill_list dt {width: 100%;}
 #wrap .profile_info .details .skill_list dd::before {display: none;}
-#wrap .profile_info .details .skill_list dd {
-    width:calc(100% / 6); margin: 0 0 12px;
-}
+#wrap .profile_info .details .skill_list dd {width:calc(100% / 6); margin: 0 0 12px;}
 #wrap .profile_info .details .skill_list dd img {width:100%;}
 #wrap .profile_info .details {display: none;}
 #wrap .profile_info .details dl {}
 #wrap .profile_info .details dl dt {line-height: 1.5;}
 #wrap .profile_info .details dl dd {line-height: 2;}
 /* ====================================================== 3. project */
-#wrap .project_wrap {}
 /* ==================================================== 공통 프로젝트(web) 선택자 */
 #wrap .web_project {}
 #wrap .web_project .web_container {}
 #wrap .web_project .web_container .project {
-    display: flex; gap:46px;
+    display: flex; flex-flow: column nowrap;
+    gap:5px;
     position: relative;
 }
 #wrap .web_project .web_container .project .title_thum {}
-#wrap .web_project .web_container .project .title_thum .mockup {height: 100vh; width: 70vw;}
+#wrap .web_project .web_container .project .title_thum .mockup {height: 50vh; width: 100%;}
 #wrap .web_project .web_container .project .title_thum .mockup img {width: 100%; height: 100%; object-fit: cover;}
-#wrap .web_project .web_container .project .details {margin: 15vh 1vw 0 0;}
+#wrap .web_project .web_container .project .details {margin: 5px 1vw 0 0;}
 #wrap .web_project .web_container .project .details h1 {
-    font-size: 2rem; font-weight: 500;
+    font-size: 1.18rem; font-weight: 500;
     margin-bottom: 19px;
 }
 #wrap .web_project .web_container .project .details .info {}
 #wrap .web_project .web_container .project .details .info .info_list {
-    margin-bottom: 19px; display: flex; flex-flow: row nowrap; gap:10px;}
-#wrap .web_project .web_container .project .details .info .info_list dt {width: 100px; flex-shrink: 0;}
+    margin-bottom: 5px; display: flex; flex-flow: row nowrap; gap:10px;}
+#wrap .web_project .web_container .project .details .info .info_list dt {width: 80px; flex-shrink: 0;}
 #wrap .web_project .web_container .project .details .info .info_list dd {}
 #wrap .web_project .web_container .project .details .plan {line-height: 2;}
 #wrap .web_project .web_container .project .details .plan .overview {color:#084FFF; display: block;}
@@ -198,6 +193,9 @@ html::-o-scrollbar-thumb {background-color: #88bcff;border-radius: 5px;}
     height:38px; border-radius: 8px; line-height: 38px;
     border: 1px solid #333;
 }
+#wrap .web_project .web_container .project .details .link a:not(.original):hover {
+    background-color: #333; color:#fff;
+}
 #wrap .web_project .web_container .project .details .link .proposal {width: 116px;}
 #wrap .web_project .web_container .project .details .link .f_prototype {
     display: grid;
@@ -208,7 +206,10 @@ html::-o-scrollbar-thumb {background-color: #88bcff;border-radius: 5px;}
 #wrap .web_project .web_container .project .details .link .f_prototype .pc {grid-column: span 2; width: 158px;}
 #wrap .web_project .web_container .project .details .link .f_prototype .tablet {width: 74px;}
 #wrap .web_project .web_container .project .details .link .f_prototype .mobile {width: 74px;}
-#wrap .web_project .web_container .project .details .link .html_proto {width: 158px;}
+#wrap .web_project .web_container .project .details .link .html_proto {width: 158px; background-color: #333; color:#fff;}
+#wrap .web_project .web_container .project .details .link a.html_proto:hover {
+    background-color: transparent; color:#333;
+}
 #wrap .web_project .web_container .project .details .link .original {
     border: 0;
     position: absolute; bottom:-80px; right:10px;
@@ -272,7 +273,7 @@ html::-o-scrollbar-thumb {background-color: #88bcff;border-radius: 5px;}
     overflow-y: auto;
     background: #fff;
     position: absolute; left:50%; top: 50%; transform: translate(-50%,-50%);
-    cursor: default;
+    cursor: default; z-index: 999;
 }
 /* #wrap .graphic_project .graphic_popup_bg .graphic_popup #close {
     position: fixed; right:10px; top:10px; z-index: 100;

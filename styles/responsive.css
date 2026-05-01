@@ -1,7 +1,41 @@
 /* responsive.css */
-@media screen and (min-width:600px) {
-    /* 1행 글자크기, 여백 등 */
-    #wrap .profile_info p span {font-size: 1.75rem;}
+@media screen and (min-width:440px) {
+    /* header */
+    #wrap header {width: 95%; padding: 0 30px;}
+    #wrap header #gnb {gap:80px;}
+    #wrap header #gnb li::after {right:-40px;}
+    /* 1p intro */
+    #wrap .intro h1 {font-size: 3rem; left:10%;}
+    #wrap .intro h1 span {font-size: 3.8rem;}
+    #wrap .intro p span {font-size: 1.25rem;}
+    /* 2p index_list */
+    #wrap .index_list .list_top {gap:50px;}
+    #wrap .index_list .list_top .num_list p {font-size: 1rem;}
+    #wrap .index_list .list_top .num_list p span {font-size: 1rem; display: block;}
+    #wrap .index_list .list_top .num_list .num {font-size: 5rem; font-family: 'Danjo-bold',sans-serif; position: relative; line-height: 1.0;overflow: hidden;}
+    #wrap .index_list .list_top .num_list .num::after {
+        content: ''; display: block; background-image: url(../images/bg2.jpg); background-size: cover;
+        box-shadow: 0 -10px 13px -5px rgba(0, 0, 0, 0.7);
+        width: 100%; height: 35%; position: absolute; bottom:3px; left:0;
+    }
+}
+@media screen and (min-width:700px) {
+    /* header */
+    #wrap header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin: 50px 0; height: 50px; width: 95%;
+    padding: 0 30px;
+    position: fixed; top:0; left:50%; transform: translateX(-50%); z-index: 800;
+    }
+    #wrap header h1 {font-size: 0.88rem; line-height: 1.5; display: block;}
+    /* 1p intro */
+    #wrap .intro h1 {font-size: 3.75rem; left:10%;}
+    #wrap .intro h1 span {font-size: 5rem;}
+    #wrap .intro p span {font-size: 1.25rem;}
+    /* 2p index_list */
+    #wrap .index_list .list_top {gap:50px;}
+    /* 3p profile_info */
+
     /* 3행 프로젝트 이미지 w100% */
     #wrap .project_wrap .project .title_thum .mockup img {
         height:auto; /* 100% 덮어쓰기값으로 auto변경 */
@@ -11,18 +45,33 @@
     #wrap .project_wrap .graphic_wrap .graphic_container a {width:184px; height: 300px;}
 } /* 사용자가 보는 기기 너비가 600보다 크면 */
 @media screen and (min-width:840px) {
-    /* 2행 info -> 1행 2열 레이아웃 구조 변경 */
-    #wrap .profile_info .details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap:7%;
-    }
+    /* 2p. index_list */
+    #wrap .index_list .list_top {gap:79px;}
+    #wrap .index_list .list_top .num_list p {font-size: 1.88rem;}
+    #wrap .index_list .list_top .num_list p span {font-size: 1.88rem; display: inline; margin: 15px;}
+    #wrap .index_list .list_top .num_list .num {font-size: 9.38rem;}
+    #wrap .index_list .list_btm p {font-size: 1.38rem;}
+    #wrap .index_list .list_btm .redesign_img {gap:20px; flex-flow:row nowrap; width: 90vw; margin: 0 auto;}
+    #wrap .index_list .list_btm .redesign_img span {width: 582px; height: 238px;}
+    /* 3p profile_info */
     #wrap .profile_info {
-    height: auto; flex-flow: row nowrap;
-    gap:5%;
-    padding: 150px 0 0 0;
+    display: flex; gap:2%;
+    justify-content:space-between;
+    padding: 150px 0 0;
     }
-    #wrap .profile_info .profile h1 {display: block;}
+    #wrap .profile_info h1 {display: block; position: absolute; top:120px; left:0px;}
+    #wrap .profile_info .profile .photo {
+    width:211px; height:257px;
+    position: relative;
+    margin: 0 0 50px 0;
+    }
+    #wrap .profile_info .profile .photo::after {width: 216px; height: 262px;}
+    #wrap .profile_info .profile .me .info_name {font-size: 2rem; font-weight: 500;}
+    #wrap .profile_info .profile .me .info_name span {font-size: 1rem; margin-left: 6px; font-weight: 450;}
+    #wrap .profile_info .details {
+    display: grid; gap:1.5%;
+    grid-template-columns: 1fr 1fr;
+    }
     #wrap .profile_info .details dl {margin-bottom: 20px;}
     #wrap .profile_info .details dl dt {font-size: 1.25rem; font-weight: 500;}
     #wrap .profile_info .details dl dd {line-height: 2.0; position: relative; word-break: keep-all;}
@@ -33,13 +82,18 @@
         border-radius: 50%;
         position: absolute; left:-10px; top:14px;
     }
+
+
+
+
+
     /* 3행 web -> 1행 2열 레이아웃 구조 변경 */
     #wrap .web_project {}
-#wrap .web_project .web_container {}
-#wrap .web_project .web_container .project {
-    display: flex; gap:46px;
-    position: relative;
-}
+    #wrap .web_project .web_container {}
+    #wrap .web_project .web_container .project {
+        display: flex; gap:46px;
+        position: relative;
+    }
 #wrap .web_project .web_container .project .title_thum {}
 #wrap .web_project .web_container .project .title_thum .mockup {height: 100vh; width: 70vw;}
 #wrap .web_project .web_container .project .title_thum .mockup img {width: 100%; height: 100%; object-fit: cover;}
@@ -95,3 +149,76 @@
         width:300px; height:400px;
     }
 } /* 사용자가 보는 기기 너비가 840보다 크면 */
+@media screen and (min-width:1200px) {
+    #wrap .profile_info {gap:5%; padding: 150px 50px 0;}
+    #wrap .profile_info h1 {left:50px;}
+    #wrap .profile_info .profile .photo {width:313px; height:382px;}
+    #wrap .profile_info .profile .photo::after {width: 321px; height: 389px;}
+    #wrap .profile_info .profile .me {width:332px;}
+    #wrap .profile_info .profile .me .info_name {font-size: 3rem;}
+    #wrap .profile_info .profile .me .info_name span {font-size: 1.13rem;}
+    #wrap .profile_info .details {gap:7%;}
+}
+@media screen and (min-width: 1575px) {
+    /* 4p web_project */
+    #wrap .web_project {}
+    #wrap .web_project .web_container {}
+    #wrap .web_project .web_container .project {
+        display: flex; gap:46px; flex-flow: row nowrap;
+        position: relative;
+    }
+    #wrap .web_project .web_container .project .title_thum {}
+    #wrap .web_project .web_container .project .title_thum .mockup {height: 100vh; width: 70vw;}
+    #wrap .web_project .web_container .project .title_thum .mockup img {width: 100%; height: 100%; object-fit: cover;}
+    #wrap .web_project .web_container .project .details {margin: 15vh 1vw 0 0;}
+    #wrap .web_project .web_container .project .details h1 {
+        font-size: 2rem; font-weight: 500;
+        margin-bottom: 19px;
+    }
+    #wrap .web_project .web_container .project .details .info {}
+    #wrap .web_project .web_container .project .details .info .info_list {
+        margin-bottom: 19px; display: flex; flex-flow: row nowrap; gap:10px;}
+    #wrap .web_project .web_container .project .details .info .info_list dt {width: 100px; flex-shrink: 0;}
+    #wrap .web_project .web_container .project .details .info .info_list dd {}
+    #wrap .web_project .web_container .project .details .plan {line-height: 2;}
+    #wrap .web_project .web_container .project .details .plan .overview {color:#084FFF; display: block;}
+    #wrap .web_project .web_container .project .details .link {
+        display: flex; flex-flow: row nowrap;
+        justify-content: flex-end;
+        gap: 10px;
+        position: absolute; bottom:10vh; right: 1vw;
+    }
+    #wrap .web_project .web_container .project .details .link a {
+        font-size: 0.88rem; text-align: center;
+        height:38px; border-radius: 8px; line-height: 38px;
+        border: 1px solid #333;
+    }
+    #wrap .web_project .web_container .project .details .link a:not(.original):hover {
+        background-color: #333; color:#fff;
+    }
+    #wrap .web_project .web_container .project .details .link .proposal {width: 116px;}
+    #wrap .web_project .web_container .project .details .link .f_prototype {
+        display: grid;
+        grid-template-columns:74px 74px;
+        gap:10px;
+    }
+    #wrap .web_project .web_container .project .details .link .f_prototype .prototype {}
+    #wrap .web_project .web_container .project .details .link .f_prototype .pc {grid-column: span 2; width: 158px;}
+    #wrap .web_project .web_container .project .details .link .f_prototype .tablet {width: 74px;}
+    #wrap .web_project .web_container .project .details .link .f_prototype .mobile {width: 74px;}
+    #wrap .web_project .web_container .project .details .link .html_proto {width: 158px; background-color: #333; color:#fff;}
+    #wrap .web_project .web_container .project .details .link a.html_proto:hover {
+        background-color: transparent; color:#333;
+    }
+    #wrap .web_project .web_container .project .details .link .original {
+        border: 0;
+        position: absolute; bottom:-80px; right:10px;
+    }
+    #wrap .web_project .web_container .project .details .link .original::after {
+        content:''; display: block; background-image: url(../images/next-button.png); width: 16px; height: 16px; background-size: cover;
+        position: absolute; right: -18px; bottom: 10px;
+    }
+    #wrap .web_project .web_container .project1 {}
+    #wrap .web_project .web_container .project2 {}
+
+}

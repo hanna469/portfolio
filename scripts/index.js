@@ -74,9 +74,24 @@ const webProjectSwiper = new Swiper(webProject,{
 })
 
 const all = document.querySelector('.all_container');
+const header = document.querySelector('header');
 const allSwiper = new Swiper(all,{
     nested: true,
     direction:'vertical',
     slidesPerView:1,
     mousewheel: true,
+    on : {
+        slideChange: function(){
+            if(this.realIndex === 0){
+                header.classList.remove('two','three');
+                header.classList.add('one');
+            } else if (this.realIndex === 1){
+                header.classList.remove('one','three');
+                header.classList.add('two');
+            } else {
+                header.classList.remove('two','one');
+                header.classList.add('three');
+            }
+        }
+    }
 })
